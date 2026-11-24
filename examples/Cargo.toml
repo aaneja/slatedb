@@ -123,8 +123,16 @@ path = "src/write_runtime.rs"
 test = false
 bench = false
 
+[[bin]]
+name = "local-logged"
+path = "src/local_logged.rs"
+test = false
+bench = false
+
 [dependencies]
 anyhow.workspace = true
+async-trait.workspace = true
+futures.workspace = true
 object_store = { workspace = true, features = ["azure", "gcp"] }
 slatedb.workspace = true
 tokio = { workspace = true, features = ["macros", "signal"] }
